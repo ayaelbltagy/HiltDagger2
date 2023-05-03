@@ -5,6 +5,6 @@ import com.example.hiltwithmealsapp.entities.ResponseModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
-class MealsRepositoryImp constructor(private val api: ApiService) : MealRepository {
+class MealsRepositoryImp  @Inject constructor(private val api: ApiService) : MealRepository {
     override suspend fun getMealsFromRemote(): ResponseModel = api.getMeals()
 }
